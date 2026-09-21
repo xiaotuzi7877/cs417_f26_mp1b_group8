@@ -2,7 +2,7 @@
 
 ## Asset ownership (2026-09-21)
 
-Ken's scene and room-specific scripts, shaders, materials, models, audio, and prefabs are under `Assets/Ken`. The scene is `Assets/Ken/Scenes/Ken's_room.unity`; its GUID remains `99c9720ab356a0642a771bea13969a05`. Existing asset and folder GUIDs were preserved during moves. Build Settings, the default scene path, and the Web profile's serialized default scene path follow the rename. `Assets/Ming` and `Assets/Michael` are reserved for the other contributors. Shared XR/sample/font/configuration assets remain at their original paths.
+Ken's scene and room-specific scripts, shaders, materials, models, audio, and prefabs are under `Assets/Ken`. The scene is `Assets/Ken/Scenes/Ken's_room.unity`; its GUID remains `99c9720ab356a0642a771bea13969a05`. Existing asset and folder GUIDs were preserved during moves. Build Settings, the default scene path, and the Web profile's serialized default scene path follow the rename. `Assets/Minh` and `Assets/Michael` are reserved for the other contributors. Shared XR/sample/font/configuration assets remain at their original paths.
 
 ## Team baseline (2026-09-21)
 

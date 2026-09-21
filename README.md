@@ -24,7 +24,7 @@ The baseline uses URP 17.5.0, Input System 1.20.0, XR Interaction Toolkit 3.5.1,
 
 Read [CONTRIBUTING.md](CONTRIBUTING.md) before adding a scene. Each teammate owns a separate scene and asset folder, works on a branch, and opens a pull request. Commit asset `.meta` files alongside the assets.
 
-Owner folders: `Assets/Ken`, `Assets/Ming`, and `Assets/Michael`. Ken's room assets are grouped under `Ken`; the other two folders are ready for new contributions. Shared XR assets, samples, fonts, input actions, and project configuration remain at the top level.
+Owner folders: `Assets/Ken`, `Assets/Minh`, and `Assets/Michael`. Ken's room assets are grouped under `Ken`; the other two folders are ready for new contributions. Shared XR assets, samples, fonts, input actions, and project configuration remain at the top level.
 
 The repository owner must invite teammates through GitHub repository Settings → Collaborators. Write access is needed to push branches to this repository.
 

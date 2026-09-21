@@ -1,0 +1,170 @@
+Unity 6000.5.6f1, XR Interaction Toolkit 3.5.1.
+Updated separation and right-controller input checks:
+PASS: three separate pairs
+PASS: key separated from lock: BloodVial
+PASS: lock prefab contains no key
+PASS: key separated from lock: SilverStake
+PASS: lock prefab contains no key
+PASS: key separated from lock: BatMedallion
+PASS: lock prefab contains no key
+PASS: right-hand ray targets BloodVial
+PASS: aim alone does not grab
+PASS: gold targeting affordance
+PASS: real right grip action selects BloodVial
+PASS: targeted key moves to hand
+PASS: cyan held affordance
+PASS: wrong lock still rejected
+PASS: wrong lock still rejected
+PASS: release into matching lock: BloodVial
+PASS: right-hand ray targets SilverStake
+PASS: aim alone does not grab
+PASS: gold targeting affordance
+PASS: real right grip action selects SilverStake
+PASS: targeted key moves to hand
+PASS: cyan held affordance
+PASS: wrong lock still rejected
+PASS: wrong lock still rejected
+PASS: release into matching lock: SilverStake
+PASS: right-hand ray targets BatMedallion
+PASS: aim alone does not grab
+PASS: gold targeting affordance
+PASS: real right grip action selects BatMedallion
+PASS: targeted key moves to hand
+PASS: cyan held affordance
+PASS: wrong lock still rejected
+PASS: wrong lock still rejected
+PASS: release into matching lock: BatMedallion
+RAY_GRAB_VALIDATION_PASSED
+Tests use the project right NearFarInteractor prefab, XR Origin, hand interaction group, and an XRSimulatedController with the existing right-hand GripButton action. Input actions and controller mappings in the main project were not modified.
+Full first-party runtime source compilation passed against main-project Unity/package references.
+URP layout preview inspected. Main-scene headset reach and comfort remain manual checks.
+An unrelated Unity Editor SearchDatabase startup indexing exception occurred in the isolated project; gameplay checks subsequently completed successfully.
+
+Escape rubric additions - 2026-09-15
+- New VampireEscape component wired to the existing VampireRelics arrangement prefab.
+- Main-project first-party C# compilation passed using Unity's generated response file and installed Roslyn compiler.
+- Isolated Unity 6000.5.6f1 Play Mode: ESCAPE_VALIDATION_PASSED.
+- Two fresh rounds per run exercised all three matching physical key drops at opposite tabletop edges.
+- Wrong-pair CanSelect rejection verified for each lock.
+- One/two installed props cannot win; three installed props cannot win until all openings finish.
+- All three matching keys remain selected by their sockets at victory.
+- Completion fires exactly once and resets on fresh prefab instantiation.
+- Lock indicator property blocks verified at an intermediate eased color, before the solved color.
+- Goal, grab teaching, and victory text verified at runtime.
+- URP before/after images rendered and visually inspected; labels readable, all three installed props visible in the winning view.
+- Unity's isolated Editor SearchDatabase startup emitted its known ArgumentOutOfRangeException; gameplay tests continued and passed. No new script compile errors.
+- Main scene/headset interaction and actual walkthrough video have not been performed.
+- Lock mechanics retain the common broad-table offering rule. Themes and opening motions vary, but there is no progression in puzzle complexity.
+
+TMP presentation migration - 2026-09-15
+- Native Unity prefab conversion preserves existing prefab GUIDs and scene root transform IDs.
+- Nine TextMeshPro 3D labels: three key names, three raised lock titles, three status indicators.
+- Four TextMeshProUGUI labels on a saved world-space Canvas, with opaque non-interactive background.
+- No legacy TextMesh components remain in the relic arrangement; text vertex alpha is 1 and all font references resolve.
+- Generic grab/offer explanations removed from tables and retained on Canvas.
+- Main-project first-party C# compilation passed with Unity's generated response file.
+- Isolated Unity Play Mode: TMP_VALIDATION_PASSED. Matching edge drops unlock all three tables, status TMP becomes UNLOCKED, and Canvas victory TMP updates after the escape condition.
+- Before/after URP images rendered and visually inspected. Black outlines keep raised titles readable against the bright coffin.
+- Known isolated Editor SearchDatabase startup exception remained unrelated to passing gameplay tests.
+- Full main scene simulator/headset layout remains a manual check.
+
+Original Canvas integration - 2026-09-15
+- Moved the four escape TMP UI labels and opaque background from the relic prefab to SampleScene's original Canvas. No additional Canvas remains in the relic prefab.
+- Original Canvas transform retained. Original control text retained and given a bounded rectangle with reset margins.
+- Right Primary / Quit, Right Secondary / Change Light Color, Left Primary / Switch View Location all present.
+- Heading/progress references use scene prefab overrides. Existing object-position overrides preserved.
+- Static serialized local-reference validation passed for both the scene and prefab.
+- Isolated scene extracted from the actual Canvas and relic instance passed Unity Play Mode: CANVAS_VALIDATION_PASSED.
+- Verified one Canvas named Canvas; five TMP UI labels; original controls; no text overflow; all locks open; victory updates the existing Canvas.
+- URP Canvas render visually checked: all instructions and original controls readable without overlap.
+- Known isolated Editor SearchDatabase startup exception appeared; no new script errors and gameplay checks passed.
+- Full original scene and headset view not exercised.
+
+Boarded wall doorway and hidden crypt - 2026-09-15
+- Unity-native geometry: opaque oak door, iron straps/handle, four planks with 16 nail heads, solid surrounding wall sections, enclosed crypt floor/walls/ceiling, and two warm sconces.
+- Night Crest and bat-medallion display moved inside the room while retaining nested prefab identity and the three-lock victory hierarchy.
+- BoardedCryptDoor stores explicit references to Blood Tithe and Hunter's Seal. Both must finish their openings before the barricade and door animate.
+- Main-project C# compilation passed with Unity's compiler and generated response file.
+- Final isolated Unity Play Mode: WALL_ROOM_VALIDATION_PASSED, exercising both prerequisite orders in fresh rounds.
+- Verified initial collision barrier, one-lock rejection, eased rather than instant reveal, key/socket disabled until revealed, floor and back-wall collision, clear player-sized capsule passage afterward, and Night Crest completing the original escape condition.
+- Verified replacement wall front faces at Z=7.5 leave the existing Canvas at Z=7.49 visible.
+- Scene front_plane disabled; its replacement geometry has a real doorway rather than a collider over the opening. Scene-local references and pre-existing object position overrides preserved.
+- Closed/open URP renders visually inspected. Bat pedestal placed on the right to clear the inward-swinging door on the left.
+- First isolated harness moved an instantiated Rigidbody hierarchy after Awake; it was corrected to initialize scene placement/UI before activation. Final tests use correct scene-style activation and pass.
+- Known isolated Editor SearchDatabase startup exception persists; no new compile errors in the final run.
+- Full main-scene simulator/headset walkthrough not performed. This step implements a physical reveal/room, not the future house/car teleport gates.
+
+Left-secondary teleport doors - 2026-09-15
+- BoardedCryptDoor no longer rotates the door hinge or disables the passage collider. The boards still clear after both required locks finish.
+- Added inside-facing return door, two landing markers, and CryptDoorTeleport with existing LeftHand/SecondaryButton action reference.
+- Scene-wired XR Origin and left controller references use verified source IDs from the project's XR rig; all local scene/prefab references checked.
+- Main-project runtime C# compilation passed; final isolated Unity import/compilation passed.
+- GATE_VALIDATION_PASSED using XRSimulatedController left/right devices and real secondary-button action bindings.
+- Verified: sealed gate denies teleport; no automatic opening/teleport after unlocking; right secondary denied; aiming away denied; obstruction denied; left aim + secondary enters crypt; inside door returns to main room; tracked head height retained; destination facing correct; no automatic repeat; Night Crest remains enabled after reveal.
+- Test used a controlled controller transform with XROrigin; production uses the existing left NearFar caster when present. Full main scene/headset interaction was not exercised.
+- Isolated Editor SearchDatabase startup exception remains unrelated to the passing gameplay checks.
+
+2026-09-15 — Five gate layout
+FIVE_GATE_BUILD_PASSED: 5 paired destinations; exactly three original keys and three locks.
+FIVE_GATE_PLAYMODE_PASSED (final test6.log, true runtime prefab clones):
+- Simulated XR left Secondary enters all four added locations and returns; destination facing/head height preserved.
+- Right Secondary does not teleport. Sealed crypt rejects travel.
+- Actual raycasts hit all eight new entrance/return targets with existing cottage and car geometry present.
+- Planet stake grabbed with a direct interactor follows gate travel; releasing after the jump stays below the test's 15 m/s velocity limit.
+- First two original sockets reveal crypt; final socket still produces the original three-lock victory.
+- Saved prefab has no duplicate YAML IDs or unresolved external GUIDs; existing scene override target IDs preserved.
+- Main Assembly-CSharp compiler completed exit 0 using the project's Unity response file.
+- Native URP previews reviewed: blue coffin cabin, green normal cabin, house, planet terrace, parking layout.
+Earlier harness issues corrected: targeted socket child instead of prefab root, cooldown timing, cylinder capsule collision bulges, and editor-only connected prefab instantiation. Final runtime-clone run has none of those errors.
+Known isolated-editor startup noise: UnityEditor.Search.SearchDatabase ArgumentOutOfRangeException; unrelated to runtime tests, which completed successfully.
+Limitations: full main-scene headset/simulator walkthrough and target-platform build not run. Test XR rig supplies pointing transforms and uses XRSimulatedController button events; production NearFar cast-origin behavior uses the existing implementation.
+
+2026-09-16 — Blood bat collectibles
+BLOOD_BAT_BUILD_PASSED: 4 bats, hidden original vial, saved TMP house scoreboard.
+BLOOD_BAT_PLAYMODE_PASSED (final test4.log, isolated Unity 6000.5.6f1):
+- Real NearFarInteractor components with XRSimulatedController grip input; right-hand ray hover and selection tested.
+- Left grip and aiming without grip leave score unchanged.
+- A held grip counts a caught bat only once; model and collider hide during cooldown.
+- Bat is still unavailable before five seconds, then returns and can be caught again.
+- Vial stays inactive for counts 0, 1 and 2; becomes active at 3; scoreboard changes to ready.
+- Released vial keeps Rigidbody/grab behavior and unlocks the original Blood Tithe socket.
+- Catching a respawned bat increments to 4 without resetting the installed vial or duplicating keys.
+- Fresh round resets count to zero and vial to inactive.
+- Native URP previews reviewed for bat silhouette and house empty/reward states.
+Main Assembly-CSharp compilation with Unity's project response file: exit 0.
+Saved prefab: all 1,074 existing object IDs preserved; only four existing blocks changed (root components, root children, house children, blood-vial nested instance active override); 234 native blocks added. YAML block ordering restored for a focused diff without changing serialized data.
+Known prior scene font overrides reference six IDs absent from the original prefab; unchanged by this task. New right-controller override targets the saved collection component and existing right-controller transform.
+Known isolated-editor startup SearchDatabase ArgumentOutOfRangeException appears before tests; final runtime tests passed with no feature exceptions.
+Limitations: full main-scene headset walkthrough and a platform build were not run.
+
+2026-09-16 Planet silver stake puzzle
+PASS: Native prefab generation and two isolated Unity Play Mode runs (PLANET_PUZZLE_PLAYMODE_PASSED).
+PASS: Right-hand selection, hover/left-hand rejection, held-grip rejection, wrong reset, ordered sequence, eased cage, delayed release, released stake ray grab, original coffin acceptance, solved state, resized portal targeting; three locks and four bats retained.
+PASS: Main-project first-party C# compilation with existing Unity reference assemblies (exit 0).
+PASS: All 1290 pre-change prefab blocks retained, 164 new blocks, native generated data preserved exactly, internal fileIDs resolve, right-controller scene override assigned.
+PASS: Locked and unlocked rendered layouts inspected.
+LIMIT: Isolated Editor startup logs include the pre-existing UnityEditor.Search.SearchDatabase ArgumentOutOfRangeException; no feature test failure. Full main-scene/headset walkthrough not run.
+
+2026-09-16 Pedestrian car key gates
+PASS: Native isolated Unity prefab generation (CAR_KEYS_BUILD_PASSED).
+PASS: Isolated Unity Play Mode with NearFarInteractor and simulated right-controller grip events (CAR_KEYS_PLAYMODE_PASSED): initial locked/no teleport and find-key hint; distant/left/hover rejection; blue collection and controller parenting; wrong-car rejection without consumption; blue key destruction and cabin travel; no repeated pickup; permanent unlock state; free return; green collection/consumption/destruction and travel; only two gate entries require keys; all three relic locks retained.
+PASS: Main-project C# compilation with existing Unity references (exit 0).
+PASS: All 715 original ParkingLot serialized blocks retained plus 48 new blocks; all 1454 VampireRelics blocks retained; internal references resolve and native generated data preserved; both pickup right-hand bindings and cross-prefab car gate references verified.
+LIMIT: Full main-scene/headset visual walkthrough not run. The known isolated UnityEditor.Search.SearchDatabase startup exception remains unrelated to passing feature tests.
+
+2026-09-16 Pickup sounds and decoy cube
+PASS: Isolated Unity native asset generation (PICKUP_SOUND_BUILD_PASSED), final Play Mode run (PICKUP_SOUND_PLAYMODE_PASSED), and main-project C# compile (exit 0).
+PASS: Three relic keys use yeah; decoy uses hmm; no automatic/hover/release playback; player grab and re-grab play; socket selection does not play. Both real car-key collection flows with NearFarInteractor and controller input events played yeah after acquisition, with no repeat playback. Cube has gravity, falls/tumbles, and is rejected by all three VampireLock types. Saved cube placement verified.
+PASS: Existing serialized IDs preserved across five modified prefabs; local references resolve; native generated serialized data preserved exactly. Six PickupSound components verified across five useful keys and one decoy; mono/preloaded clip import settings verified.
+LIMIT: Playback verified through AudioSource.isPlaying and correct clip references, not subjective headset listening. Full main-scene walkthrough not run. Known isolated Editor SearchDatabase startup exception remains unrelated to passing tests.
+
+2026-09-16 Twelve additional decoys (13 total)
+PASS: Isolated native Unity generation and compilation (TWELVE_DECOYS_BUILD_PASSED), Play Mode validation (THIRTEEN_DECOYS_PLAYMODE_PASSED).
+PASS: All 13 decoys have gravity bodies/colliders/grab interactables, fall and tumble, play hmm on grab/regrab but not release, and are rejected by all three relic locks. Exactly 13 distinct named decoys coexist with the original three VampireKeys and three VampireLocks. Physical placement fixture with authored room geometry verified every prop settles above the floor with support beneath it. Unrelated gameplay scripts were removed only from the placement test fixture.
+PASS: 1456 pre-change wrapper blocks preserved; 58 new blocks added. Internal fileIDs resolve. Twelve prefab assets and saved cone meshes/material exist. Final orange material/mug visual polish preserved all object IDs. Final native model preview reviewed and saved as Docs/Decoy-models.png. Preview uses equivalent built-in shading, not the main URP lighting.
+LIMIT: Full main-scene/headset walkthrough and subjective audio balance not tested. Existing isolated Editor SearchDatabase startup exception remains unrelated to passing feature tests.
+
+2026-09-16 Invisible writing
+PASS: Native Unity asset generation and isolated URP GPU render checks (INVISIBLE_WRITING_GPU_TEST_PASSED). Final rendered answer differences: front 0 pixels; left 40 degrees 8507 pixels; right 40 degrees 0; left 70 degrees 0. Both approximate eye offsets at the actual marker produced a visible answer. No shader compiler errors. Marker within landing cap, normals face upward. Visible clue excludes original answer sentence. Front/left previews reviewed; answer fits board.
+PASS: All 1514 previous wrapper blocks retained, 8 added, local references resolve, installed prefab data matches tested native data. Shader matches tested source.
+LIMIT: Tests use URP camera renders and approximate eye offsets; actual XR headset rendering/comfort and non-editor target GPU builds not tested. Known isolated Editor SearchDatabase startup exception is unrelated.

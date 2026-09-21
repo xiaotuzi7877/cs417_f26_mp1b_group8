@@ -14,7 +14,7 @@ Each pairing differs in silhouette, theme, color, label, and moving mechanism. D
 
 ## Scene and controls
 
-- Open `Assets/Scenes/SampleScene.unity` and enter Play Mode.
+- Open `Assets/Ken/Scenes/Ken's_room.unity` and enter Play Mode.
 - The **Vampire Relics** group contains separate **Keys** and **Locks** groups. Keys stand on their own pedestals at world Z=1.2; the lock stations are farther back at Z=3.6.
 - Both XR controllers have direct-grab children with 12 cm trigger volumes. They use the existing XRI left/right **Select** grip actions and join the existing hand interaction groups with priority over distant grabbing.
 - Aim the **right controller's ray** at a key. Its accent turns **gold** to show it can be grabbed. Hold the **grip button** to pull it to your hand; its accent turns **cyan** while held. Carry it to the matching lock and release grip to offer it. Aiming alone never collects a key.
@@ -23,11 +23,11 @@ Each pairing differs in silhouette, theme, color, label, and moving mechanism. D
 
 ## Editing
 
-`Assets/VampireProps/VampireRelics.prefab` arranges the separate key displays and lock stations. `BloodVialKey.prefab`, `SilverStakeKey.prefab`, and `BatMedallionKey.prefab` are independent movable props. `ChaliceLock.prefab`, `CoffinLock.prefab`, and `CryptLock.prefab` contain only the accepting mechanism, with no key inside. Move or reuse each independently. Shapes and materials are saved Unity assets; Blender is not required.
+`Assets/Ken/VampireProps/VampireRelics.prefab` arranges the separate key displays and lock stations. `BloodVialKey.prefab`, `SilverStakeKey.prefab`, and `BatMedallionKey.prefab` are independent movable props. `ChaliceLock.prefab`, `CoffinLock.prefab`, and `CryptLock.prefab` contain only the accepting mechanism, with no key inside. Move or reuse each independently. Shapes and materials are saved Unity assets; Blender is not required.
 
 `VampireKey` derives from XRGrabInteractable. Its **Relic** enum defines the identity. The saved **Far Attach Mode = Near** setting brings a ray-selected key to the hand. Hover/select events drive the targeting and held colors. `VampireLock` derives from XRSocketInteractor; **Required Relic** chooses its match, and **On Unlocked** can trigger another scene event later. **Moving Part**, **Opened Local Position**, and **Opened Local Euler Angles** configure the visible opening.
 
-`LeftDirectGrab.prefab` and `RightDirectGrab.prefab` are attached to their matching controller in SampleScene. `VampireDirectInteractor` joins its parent hand's XRInteractionGroup at startup to avoid competing with that hand's ray interactor. Existing input assets and project settings are unchanged.
+`LeftDirectGrab.prefab` and `RightDirectGrab.prefab` are attached to their matching controller in Ken's_room. `VampireDirectInteractor` joins its parent hand's XRInteractionGroup at startup to avoid competing with that hand's ray interactor. Existing input assets and project settings are unchanged.
 
 Unlock and victory state reset when the scene reloads. There is no inventory UI or persistent save system.
 
@@ -56,7 +56,7 @@ Solve Blood Tithe and Hunter's Seal, in either order. Once both lock animations 
 
 Night Crest and the bat-medallion pedestal are inside the enclosed crypt beyond the wall. The room has a floor, walls, ceiling, and warm sconces. Its key and socket interactions stay disabled until the boards have cleared, preventing a ray grab or solve through the sealed wall. Night Crest still supplies the third lock required for victory.
 
-Edit **VampireRelics > Boarded wall doorway and hidden crypt**. `BoardedCryptDoor` has explicit references to the two required locks, boards, door hinge, passage collider, status label, and gated interactions. `CryptDoorTeleport` handles both doors, using the existing LeftHand/SecondaryButton input action. Scene overrides assign the XR Origin and left controller. A clear pointing ray within 10 m is required; other surfaces block the ray. Each press teleports once, with a short cooldown, preserving head height and facing the destination. The original `front_plane` is disabled in SampleScene; three solid wall sections in the relic arrangement replace it around the opening. Keep the arrangement's scene position at (0,0,3) so those sections align with the room boundary.
+Edit **VampireRelics > Boarded wall doorway and hidden crypt**. `BoardedCryptDoor` has explicit references to the two required locks, boards, door hinge, passage collider, status label, and gated interactions. `CryptDoorTeleport` handles both doors, using the existing LeftHand/SecondaryButton input action. Scene overrides assign the XR Origin and left controller. A clear pointing ray within 10 m is required; other surfaces block the ray. Each press teleports once, with a short cooldown, preserving head height and facing the destination. The original `front_plane` is disabled in Ken's_room; three solid wall sections in the relic arrangement replace it around the opening. Keep the arrangement's scene position at (0,0,3) so those sections align with the room boundary.
 
 ## Five gate layout (current)
 
@@ -84,7 +84,7 @@ One blood bat circles slowly above each of the four existing trees, with animate
 
 The blood vial is authored inactive, leaving its house pedestal empty. The scoreboard initially says MORE BLOOD BATS NEEDED and shows progress toward three catches. At three total catches, BloodBatCollection activates the original vial once and changes the message to BLOOD VIAL READY. The vial remains a normal physical VampireKey and fits the original Blood Tithe lock. Further catches keep increasing the total without creating another vial or moving a vial that has already been taken or installed. A new scene round resets the count and hides the vial again.
 
-BloodBatCollectible derives from XRBaseInteractable, sharing the existing XRI grip/Select input but collecting instead of staying in the hand. Its kinematic body follows a 0.35 m orbit at 18 degrees/second, 2.5 m above each tree origin. Only the model/collider hide during respawn, so its timer continues running. Collection is completed after XRI selection callbacks finish. All bat meshes/materials and the scoreboard are saved native Unity assets in VampireRelics.prefab; SampleScene assigns BloodBatCollection.rightController to the existing right-hand transform. No input asset or project settings changes are required. General instructions stay on the original Canvas and contain controller controls only.
+BloodBatCollectible derives from XRBaseInteractable, sharing the existing XRI grip/Select input but collecting instead of staying in the hand. Its kinematic body follows a 0.35 m orbit at 18 degrees/second, 2.5 m above each tree origin. Only the model/collider hide during respawn, so its timer continues running. Collection is completed after XRI selection callbacks finish. All bat meshes/materials and the scoreboard are saved native Unity assets in VampireRelics.prefab; Ken's_room assigns BloodBatCollection.rightController to the existing right-hand transform. No input asset or project settings changes are required. General instructions stay on the original Canvas and contain controller controls only.
 
 ## Silver stake sequence puzzle
 
@@ -92,7 +92,7 @@ The planet landing plate now holds a compact clue board, three symbol buttons, a
 
 PlanetStakePuzzle tracks the ordered sequence. Wrong input resets progress with red feedback; correct symbols turn green. Hover, left-hand input, and moving a held grip across buttons do not enter symbols. After three correct presses the cage rises over 1.2 seconds with eased motion. Only after it clears does the original silver stake become grabbable and its Rigidbody become dynamic. Solving is permanent for that scene round. The same key still fits Hunter's Seal and can travel through gates.
 
-PlanetSymbolButton shares the existing XRI Select input. SampleScene assigns PlanetStakePuzzle.rightController to the existing right controller. Geometry, references, and the locked initial key state are authored in VampireRelics.prefab. The original Canvas includes the planet puzzle instruction; the local question and buttons use solid TMP text. No input asset changes are needed.
+PlanetSymbolButton shares the existing XRI Select input. Ken's_room assigns PlanetStakePuzzle.rightController to the existing right controller. Geometry, references, and the locked initial key state are authored in VampireRelics.prefab. The original Canvas includes the planet puzzle instruction; the local question and buttons use solid TMP text. No input asset changes are needed.
 
 Validated in isolated Unity Play Mode with actual NearFarInteractor selection and controller input events: hand filtering, hover, fresh presses, wrong-order reset, ordered success, intermediate cage movement, delayed key release, right-ray key grab, original coffin acceptance, solved-state persistence, and return portal targeting. Main-project C# compilation also passed. A full main-scene/headset walkthrough has not been performed. Preview images: PlanetPuzzle-locked.png and PlanetPuzzle-unlocked.png.
 
@@ -102,11 +102,11 @@ Both car entrances now start locked. Pedestrian 1 wears blue and provides the bl
 
 The collected key model moves to a small key-ring position beside the right controller, leaving normal relic grabbing available. Both keys can be carried together. Aim left at the matching car door and press Left Secondary to consume/destroy that key, animate the door, and teleport into the cabin. Without its matching key, the door remains shut and displays "car locked". Collecting the matching key immediately changes this to "car unlocked"; the same text remains after the key is consumed on entry. The wrong car does not consume another key. Once unlocked, the car remains accessible for that round; return gates do not require keys. Other destinations and the three relic locks are unchanged.
 
-PedestrianCarKey owns its one-shot collection and consumption state. CryptDoorTeleport.Gate adds requiresCarKey and an explicit carKey reference. ParkingLot.prefab stores the two pickup components, colliders and key models. SampleScene binds each to the right controller and binds the two outer car gates to their corresponding pedestrians. No new input actions or packages are required.
+PedestrianCarKey owns its one-shot collection and consumption state. CryptDoorTeleport.Gate adds requiresCarKey and an explicit carKey reference. ParkingLot.prefab stores the two pickup components, colliders and key models. Ken's_room binds each to the right controller and binds the two outer car gates to their corresponding pedestrians. No new input actions or packages are required.
 
 ## Pickup sounds and decoy test cube
 
-All five useful keys play Assets/sound_effect/yeah.mp3 when collected: blood vial, silver stake, bat medallion, and the blue/green car keys. Normal relics play on each player grab, including re-grabs, but not on hover, release, or socket installation. Car keys play after successful collection onto the controller. AudioSources are native prefab components, with play-on-awake and looping off, spatial blend 1, no Doppler, volume 0.8 and attenuation over 1-8 m. Both short sound clips import as mono with audio data preloaded.
+All five useful keys play Assets/Ken/sound_effect/yeah.mp3 when collected: blood vial, silver stake, bat medallion, and the blue/green car keys. Normal relics play on each player grab, including re-grabs, but not on hover, release, or socket installation. Car keys play after successful collection onto the controller. AudioSources are native prefab components, with play-on-awake and looping off, spatial blend 1, no Doppler, volume 0.8 and attenuation over 1-8 m. Both short sound clips import as mono with audio data preloaded.
 
 DecoyCube.prefab is a 0.3 m grey cube with a BoxCollider, gravity Rigidbody and standard XRGrabInteractable. One instance sits in front of the house, beside the entrance, initially at world (-2.5, 0.6, 4.2). It falls to the existing floor, can be grabbed and thrown, and plays hmm.mp3 on each pickup. It has no VampireKey identity, so none of the three relic locks accept it.
 
@@ -114,7 +114,7 @@ For more decoys, use distinct models with Rigidbody, collider and XRGrabInteract
 
 ## Twelve additional decoy props
 
-The scene now contains 13 distinct decoys, including the original grey cube. The twelve new native prefabs live in Assets/VampireProps/Decoys. Each has a different compound model, a solid collider, a gravity Rigidbody, a standard XRGrabInteractable, and PickupSound using hmm.mp3. They use the same grab controls as the relics and have no VampireKey identity, so no relic lock accepts them. No extra key-like symbols or overhead hints were added.
+The scene now contains 13 distinct decoys, including the original grey cube. The twelve new native prefabs live in Assets/Ken/VampireProps/Decoys. Each has a different compound model, a solid collider, a gravity Rigidbody, a standard XRGrabInteractable, and PickupSound using hmm.mp3. They use the same grab controls as the relics and have no VampireKey identity, so no relic lock accepts them. No extra key-like symbols or overhead hints were added.
 
 | Prop | Placement |
 | --- | --- |

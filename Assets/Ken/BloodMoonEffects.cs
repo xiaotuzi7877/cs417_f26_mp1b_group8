@@ -13,7 +13,7 @@ public class BloodMoonEffects : MonoBehaviour
         SetPlaying(bursts, false);
         if (clouds.Length == 0 && bursts.Length == 0)
         {
-            Debug.LogError("Blood Moon Effects has no scene emitters assigned. Reload the updated SampleScene outside Play mode.", this);
+            Debug.LogError("Blood Moon Effects has no scene emitters assigned. Reload the updated Ken's_room outside Play mode.", this);
         }
     }
 

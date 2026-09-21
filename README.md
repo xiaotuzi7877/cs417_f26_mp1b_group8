@@ -15,7 +15,7 @@ Team Unity VR project, starting from Zijian's saved MP1A project on September 21
    ```
 
 3. In Unity Hub, add this repository folder as a project. It directly contains `Assets`, `Packages`, and `ProjectSettings`; there is no nested `mp1a` folder.
-4. Let Unity finish importing assets and resolving packages. Open `Assets/Scenes/SampleScene.unity`.
+4. Let Unity finish importing assets and resolving packages. Open `Assets/Ken/Scenes/Ken's_room.unity`.
 5. Enter Play Mode and check the Console. The first import regenerates `Library` and can take several minutes.
 
 The baseline uses URP 17.5.0, Input System 1.20.0, XR Interaction Toolkit 3.5.1, and OpenXR 1.17.1. Use the committed package manifest and lockfile; coordinate any editor or package upgrades with the team.
@@ -23,6 +23,8 @@ The baseline uses URP 17.5.0, Input System 1.20.0, XR Interaction Toolkit 3.5.1,
 ## Team contributions
 
 Read [CONTRIBUTING.md](CONTRIBUTING.md) before adding a scene. Each teammate owns a separate scene and asset folder, works on a branch, and opens a pull request. Commit asset `.meta` files alongside the assets.
+
+Owner folders: `Assets/Ken`, `Assets/Ming`, and `Assets/Michael`. Ken's room assets are grouped under `Ken`; the other two folders are ready for new contributions. Shared XR assets, samples, fonts, input actions, and project configuration remain at the top level.
 
 The repository owner must invite teammates through GitHub repository Settings â†’ Collaborators. Write access is needed to push branches to this repository.
 
@@ -32,6 +34,6 @@ The repository owner must invite teammates through GitHub repository Settings â†
 - [Vampire puzzle setup](Docs/VampireRelics.md)
 - [Project context and inherited development notes](Docs/AI/UnityProjectContext.md)
 
-`SampleScene` is currently the only enabled build scene. Scene transitions and additional team scenes have not been implemented yet. The project keeps its inherited Unity application settings; agree on any MP1B application-name or Android package-identifier changes before a release.
+`Ken's_room` is currently the only enabled build scene. Scene transitions and additional team scenes have not been implemented yet. The project keeps its inherited Unity application settings; agree on any MP1B application-name or Android package-identifier changes before a release.
 
 This repository starts with a fresh Git history. MP1A's repository remains separate. Generated caches, builds, debug backups, and individual submission documents/videos are not part of this baseline. Unity import, Play Mode, and headset validation still need to be performed on the new copy.

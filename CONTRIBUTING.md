@@ -10,10 +10,10 @@ git pull --ff-only
 git switch -c scene/your-name
 ```
 
-Open the project with Unity 6000.5.6f1. Create your folders through Unity's Project window:
+Open the project with Unity 6000.5.6f1. The three owner folders are `Assets/Ken`, `Assets/Ming`, and `Assets/Michael`. Ken's existing room is `Assets/Ken/Scenes/Ken's_room.unity`. Ming and Michael can create subfolders through Unity's Project window, for example:
 
 ```text
-Assets/Team/YourName/
+Assets/Ming/
   Scenes/
   Prefabs/
   Materials/
@@ -22,7 +22,7 @@ Assets/Team/YourName/
   Models/
 ```
 
-Use a distinct scene name such as `YourName_Room`. Existing baseline assets stay at their current paths. Coordinate before editing shared scripts, prefabs, input actions, packages, project settings, or `SampleScene`. Use unique script class names or a teammate-specific namespace to prevent duplicate class errors.
+Use a distinct scene name such as `Ming_room` or `Michael_room`. Put your scene and its own assets under your owner folder. Shared XR assets, imported samples, TextMesh Pro, input actions, and project configuration remain outside these folders. Coordinate before editing shared assets or another teammate's room. Use unique script class names or a teammate-specific namespace to prevent duplicate class errors.
 
 ## Bring an existing scene from another project
 
@@ -41,13 +41,13 @@ Save everything in Unity and review changes before committing. For a contributio
 
 ```sh
 git status --short
-git add Assets/Team/YourName Assets/Team/YourName.meta
+git add Assets/Ming Assets/Ming.meta
 git diff --cached --stat
 git commit -m "Add YourName room scene and dependencies"
 git push -u origin scene/your-name
 ```
 
-When creating `Assets/Team` for the first time, also stage its `Assets/Team.meta`. Explicitly stage any required dependencies outside your own folder and their `.meta` files after reviewing them. Always inspect staged changes; do not commit `Library`, `Temp`, `Logs`, local settings, APKs, or debug/backup output.
+Replace `Ming` with your own folder name in the example. Explicitly stage any required dependencies outside your own folder and their `.meta` files after reviewing them. Always inspect staged changes; do not commit `Library`, `Temp`, `Logs`, local settings, APKs, or debug/backup output.
 
 Open a pull request into `main` describing your scene path, controls, added dependencies, and tests performed. Have a teammate review it before merging. If Git reports conflicts in a scene or prefab, coordinate with its owner; never resolve by blindly discarding either version. Unity's YAML merge driver requires local configuration even though `.gitattributes` names it.
 

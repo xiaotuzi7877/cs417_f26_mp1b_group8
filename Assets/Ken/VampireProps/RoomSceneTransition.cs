@@ -51,7 +51,7 @@ public sealed class RoomSceneTransition : MonoBehaviour
     private void ShowContinuePrompt()
     {
         inputReleased = false;
-        puzzle.SetContinuationPrompt("NEXT: MICHAEL'S ROOM\nPress LEFT THUMBSTICK (click) or keyboard N");
+        puzzle.SetContinuationPrompt("NEXT: MICHAEL'S ROOM\nClick the LEFT THUMBSTICK to continue");
     }
 
     private void Update()
@@ -97,7 +97,7 @@ public sealed class RoomSceneTransition : MonoBehaviour
             Debug.LogException(exception, this);
         }
         loading = false;
-        puzzle.SetContinuationPrompt("Could not load Michael's room. Press LEFT THUMBSTICK or N to retry.");
+        puzzle.SetContinuationPrompt("Could not load Michael's room. Click the LEFT THUMBSTICK to retry.");
         return false;
     }
 }

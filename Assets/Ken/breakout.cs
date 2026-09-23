@@ -24,6 +24,8 @@ public class BreakOut : MonoBehaviour
 
             if (isOutside)
             {
+                // Capture after arrival alignment, so returning uses the current room pose.
+                roomPosition = transform.position;
                 transform.position = externalViewingPoint.position;
             }
             else

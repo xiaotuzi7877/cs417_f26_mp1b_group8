@@ -1,25 +1,28 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class LightSwitch : MonoBehaviour
+namespace MinhRoom
 {
-    public InputActionReference action;
-    private Light myLight;
-    private bool isRed = false;
-
-    void Start()
+    public class LightSwitch : MonoBehaviour
     {
-        myLight = GetComponent<Light>();
-        action.action.Enable();
-        action.action.performed += (ctx) =>
+        public InputActionReference action;
+        private Light myLight;
+        private bool isRed = false;
+
+        void Start()
         {
-            ChangeColor();
-        };
-    }
+            myLight = GetComponent<Light>();
+            action.action.Enable();
+            action.action.performed += (ctx) =>
+            {
+                ChangeColor();
+            };
+        }
 
-    void ChangeColor()
-    {
-        isRed = !isRed;
-        myLight.color = isRed ? Color.red : Color.white;
+        void ChangeColor()
+        {
+            isRed = !isRed;
+            myLight.color = isRed ? Color.red : Color.white;
+        }
     }
 }

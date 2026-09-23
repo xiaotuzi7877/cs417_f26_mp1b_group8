@@ -1,5 +1,9 @@
 # MP1B project context
 
+## Minh integration compile correction (2026-09-23)
+
+The main-branch integration at `2f34a8c` introduced a second global `LightSwitch` in `Assets/Minh/LightSwitch.cs`, conflicting with Ken's existing `Assets/Ken/light.cs` and producing CS0101. Minh's class is now `MinhRoom.LightSwitch`; its file name, script GUID, fields, and behavior are unchanged. Only its two serialized class identifiers in `Assets/Scenes/SampleScene.unity` and `Assets/_Recovery/0 (1).unity` were updated. Unity 6000.5.6f1's bundled C# compiler reproduced the error before the change and compiled all 84 current default-assembly scripts after it using the project's Unity references and compiler options. Existing obsolete-API warnings remain in Michael's ManorPuzzleSocket. This check does not validate scene gameplay or model imports.
+
 ## Start screen (2026-09-23)
 
 `Assets/Shared/Scenes/StartScreen.unity` is build scene 0, followed by Ken (1) and Michael (2). Its saved world-space UI uses the existing XR Origin prefab, XRUIInputModule, and tracked-device/standard graphic raycasters. StartScreenController accepts the native Button's OnClick event or keyboard Enter and loads Ken with Single mode, unloading the foyer. Both escape rooms remain unloaded before starting. The foyer is not counted as a new story scene. Ken and the foyer reuse RoomSpawnAlignment; Ken's BreakOut captures its return pose when leaving after alignment. See `Docs/StartScreen.md`.

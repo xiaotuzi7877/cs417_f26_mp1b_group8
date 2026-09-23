@@ -2,6 +2,8 @@
 
 ## Room progression (2026-09-23)
 
+Michael's scene includes `RoomSpawnAlignment` on its XR Origin. This compensates for the persistent simulator/headset tracking-space offset after the first input pose update and before releasing locomotion. It preserves eye height and updates `MichaelManor.BreakOut`'s cached inside pose. An isolated simulator test reproduced falling outside the floor without the component and verified stable arrival with it. See `Docs/RoomTransitions.md`.
+
 The local integration branch adds `RoomSceneTransition` to Ken's `VampireRelics` prefab. After `VampireEscape.HasWon`/`OnEscaped`, left thumbstick click or keyboard N loads `Assets/Michael/Scenes/MichaelManorHall.unity` with `LoadSceneMode.Single`. Ken is build scene 0 and Michael is 1; rooms remain at their authored origins and are never intentionally loaded together. The win source owns the prompt text via `SetContinuationPrompt`. See `Docs/RoomTransitions.md`. Michael's PR remains unmerged on GitHub.
 
 ## Asset ownership (2026-09-21)

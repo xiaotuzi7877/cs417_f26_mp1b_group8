@@ -25,6 +25,11 @@ public class BreakOut : MonoBehaviour
 
     private void Start()
     {
+        CaptureInsidePose();
+    }
+
+    public void CaptureInsidePose()
+    {
         insidePosition = xrOrigin.position;
         insideRotation = xrOrigin.rotation;
     }

@@ -15,7 +15,7 @@ Team Unity VR project, starting from Zijian's saved MP1A project on September 21
    ```
 
 3. In Unity Hub, add this repository folder as a project. It directly contains `Assets`, `Packages`, and `ProjectSettings`; there is no nested `mp1a` folder.
-4. Let Unity finish importing assets and resolving packages. Open `Assets/Ken/Scenes/Ken's_room.unity`.
+4. Let Unity finish importing assets and resolving packages. Open `Assets/Shared/Scenes/StartScreen.unity`.
 5. Enter Play Mode and check the Console. The first import regenerates `Library` and can take several minutes.
 
 The baseline uses URP 17.5.0, Input System 1.20.0, XR Interaction Toolkit 3.5.1, and OpenXR 1.17.1. Use the committed package manifest and lockfile; coordinate any editor or package upgrades with the team.
@@ -34,6 +34,6 @@ The repository owner must invite teammates through GitHub repository Settings â†
 - [Vampire puzzle setup](Docs/VampireRelics.md)
 - [Project context and inherited development notes](Docs/AI/UnityProjectContext.md)
 
-The build starts in `Ken's_room`, followed by `MichaelManorHall`. After solving all three seals and seeing the win message, click the **left controller thumbstick** or press **N** on the keyboard to enter Michael's room. Only one room is loaded at a time, so both rooms can stay at the origin. See [room transition setup and checks](Docs/RoomTransitions.md). The project keeps its inherited Unity application settings; agree on any MP1B application-name or Android package-identifier changes before a release.
+The build starts in a separate foyer, `StartScreen`. Select **START GAME** with the XR UI trigger or mouse, or press **Enter**, to enter `Ken's_room`. After solving all three seals and seeing the win message, click the **left controller thumbstick** or press **N** to enter `MichaelManorHall`. Only one scene is loaded at a time, so both rooms can stay at the origin. See [start screen setup](Docs/StartScreen.md) and [room transition checks](Docs/RoomTransitions.md). The project keeps its inherited Unity application settings; agree on any MP1B application-name or Android package-identifier changes before a release.
 
 This repository starts with a fresh Git history. MP1A's repository remains separate. Generated caches, builds, debug backups, and individual submission documents/videos are not part of this baseline. The room transition has passed an isolated Unity Play Mode check with a simulated win; full puzzle and headset validation remain manual checks.

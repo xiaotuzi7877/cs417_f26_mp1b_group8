@@ -1,10 +1,14 @@
 # MP1B project context
 
+## Start screen (2026-09-23)
+
+`Assets/Shared/Scenes/StartScreen.unity` is build scene 0, followed by Ken (1) and Michael (2). Its saved world-space UI uses the existing XR Origin prefab, XRUIInputModule, and tracked-device/standard graphic raycasters. StartScreenController accepts the native Button's OnClick event or keyboard Enter and loads Ken with Single mode, unloading the foyer. Both escape rooms remain unloaded before starting. The foyer is not counted as a new story scene. Ken and the foyer reuse RoomSpawnAlignment; Ken's BreakOut captures its return pose when leaving after alignment. See `Docs/StartScreen.md`.
+
 ## Room progression (2026-09-23)
 
 Michael's scene includes `RoomSpawnAlignment` on its XR Origin. This compensates for the persistent simulator/headset tracking-space offset after the first input pose update and before releasing locomotion. It preserves eye height and updates `MichaelManor.BreakOut`'s cached inside pose. An isolated simulator test reproduced falling outside the floor without the component and verified stable arrival with it. See `Docs/RoomTransitions.md`.
 
-The local integration branch adds `RoomSceneTransition` to Ken's `VampireRelics` prefab. After `VampireEscape.HasWon`/`OnEscaped`, left thumbstick click or keyboard N loads `Assets/Michael/Scenes/MichaelManorHall.unity` with `LoadSceneMode.Single`. Ken is build scene 0 and Michael is 1; rooms remain at their authored origins and are never intentionally loaded together. The win source owns the prompt text via `SetContinuationPrompt`. See `Docs/RoomTransitions.md`. Michael's PR remains unmerged on GitHub.
+The local integration branch adds `RoomSceneTransition` to Ken's `VampireRelics` prefab. After `VampireEscape.HasWon`/`OnEscaped`, left thumbstick click or keyboard N loads `Assets/Michael/Scenes/MichaelManorHall.unity` with `LoadSceneMode.Single`. Rooms remain at their authored origins and are never intentionally loaded together. The win source owns the prompt text via `SetContinuationPrompt`. See `Docs/RoomTransitions.md`. Michael's PR remains unmerged on GitHub.
 
 ## Asset ownership (2026-09-21)
 
@@ -20,7 +24,7 @@ Copied from the saved MP1A working tree at source commit e61e5c36d61f560796ba5c4
 
 - Unity 6000.5.6f1; project root is the MP1B repository root (`mp1b_group8`).
 - URP 17.5, Input System 1.20, OpenXR 1.17.1, XR Interaction Toolkit 3.5.1.
-- Enabled build scenes: `Assets/Ken/Scenes/Ken's_room.unity`, then `Assets/Michael/Scenes/MichaelManorHall.unity`.
+- Enabled build scenes: `Assets/Shared/Scenes/StartScreen.unity`, `Assets/Ken/Scenes/Ken's_room.unity`, then `Assets/Michael/Scenes/MichaelManorHall.unity`.
 - Scene composition is primarily serialized GameObjects and small root-level MonoBehaviours. Imported XR samples have their own assemblies; first-party scripts use the default assembly.
 - The room spans x/z -7.5 to 7.5, floor y=0, ceiling y=15. The planet is at (0,7.5,0); the XR rig starts at the origin. The primitive car decoration is at (4.69,0,-4.883), rotated 90 degrees around Y.
 - `planetOrbit`, `CometOrbit`, `breakout`, `light`, and `quit` own the existing interactions. Preserve their scene wiring.

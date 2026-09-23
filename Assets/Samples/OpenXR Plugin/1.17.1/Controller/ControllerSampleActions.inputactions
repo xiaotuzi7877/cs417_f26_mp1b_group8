@@ -13,8 +13,7 @@
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "TriggerTouch",
@@ -23,8 +22,7 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Trigger",
@@ -33,18 +31,16 @@
                     "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "PrimaryButton",
                     "type": "Button",
                     "id": "204073bf-582e-48f4-a392-6eaf1e637387",
-                    "expectedControlType": "",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
+                    "initialStateCheck": false
                 },
                 {
                     "name": "PrimaryTouch",
@@ -53,8 +49,7 @@
                     "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Menu",
@@ -63,8 +58,7 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Primary2DAxis",
@@ -73,8 +67,7 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Primary2DAxisClick",
@@ -83,8 +76,7 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Primary2DAxisTouch",
@@ -93,8 +85,7 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Secondary2DAxis",
@@ -103,8 +94,7 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Secondary2DAxisClick",
@@ -113,8 +103,7 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Secondary2DAxisTouch",
@@ -123,8 +112,7 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Grip",
@@ -133,8 +121,7 @@
                     "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "GripPress",
@@ -143,8 +130,7 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
+                    "initialStateCheck": false
                 },
                 {
                     "name": "SecondaryButton",
@@ -153,8 +139,7 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
+                    "initialStateCheck": false
                 },
                 {
                     "name": "SecondaryTouch",
@@ -163,8 +148,7 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
+                    "initialStateCheck": false
                 },
                 {
                     "name": "PointerPosition",
@@ -173,8 +157,7 @@
                     "expectedControlType": "Vector3",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "PointerRotation",
@@ -183,8 +166,7 @@
                     "expectedControlType": "Quaternion",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "GripPosition",
@@ -193,8 +175,7 @@
                     "expectedControlType": "Vector3",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "GripRotation",
@@ -203,8 +184,7 @@
                     "expectedControlType": "Quaternion",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Haptic",
@@ -213,8 +193,7 @@
                     "expectedControlType": "Haptic",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
+                    "initialStateCheck": false
                 },
                 {
                     "name": "PokePosition",
@@ -223,8 +202,7 @@
                     "expectedControlType": "Vector3",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "PokeRotation",
@@ -233,8 +211,7 @@
                     "expectedControlType": "Quaternion",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "PinchPosition",
@@ -243,8 +220,7 @@
                     "expectedControlType": "Vector3",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "PinchRotation",
@@ -253,8 +229,7 @@
                     "expectedControlType": "Quaternion",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "PinchValue",
@@ -263,8 +238,7 @@
                     "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "PinchReady",
@@ -273,8 +247,7 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
+                    "initialStateCheck": false
                 },
                 {
                     "name": "PointerActivate",
@@ -283,8 +256,7 @@
                     "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "PointerActivateReady",
@@ -293,8 +265,7 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
+                    "initialStateCheck": false
                 },
                 {
                     "name": "GraspValue",
@@ -303,8 +274,7 @@
                     "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "GraspReady",
@@ -313,8 +283,7 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
+                    "initialStateCheck": false
                 },
                 {
                     "name": "PalmPosePosition",
@@ -323,8 +292,7 @@
                     "expectedControlType": "Vector3",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "PalmPoseRotation",
@@ -333,8 +301,7 @@
                     "expectedControlType": "Quaternion",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "PinchPose",
@@ -343,8 +310,7 @@
                     "expectedControlType": "Pose",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "PokePose",
@@ -353,8 +319,7 @@
                     "expectedControlType": "Pose",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "PalmPose",
@@ -363,8 +328,7 @@
                     "expectedControlType": "Pose",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "GripPose",
@@ -373,8 +337,7 @@
                     "expectedControlType": "Pose",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "AimPose",
@@ -383,8 +346,7 @@
                     "expectedControlType": "Pose",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Tracked",
@@ -393,8 +355,7 @@
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -873,8 +834,7 @@
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
+                    "initialStateCheck": false
                 },
                 {
                     "name": "TriggerTouch",
@@ -883,8 +843,7 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Trigger",
@@ -893,18 +852,16 @@
                     "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "PrimaryButton",
                     "type": "Button",
                     "id": "b87d0657-0e2f-41f9-92ee-6c7f0b0fa4f8",
-                    "expectedControlType": "",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
+                    "initialStateCheck": false
                 },
                 {
                     "name": "PrimaryTouch",
@@ -913,8 +870,7 @@
                     "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Menu",
@@ -923,8 +879,7 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Primary2DAxis",
@@ -933,28 +888,25 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Primary2DAxisClick",
                     "type": "Button",
                     "id": "1c531107-9819-4f1f-a0e7-f11166016436",
-                    "expectedControlType": "",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Primary2DAxisTouch",
                     "type": "Button",
                     "id": "4de79a39-d622-4859-8f67-791365c0b780",
-                    "expectedControlType": "",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Secondary2DAxis",
@@ -963,28 +915,25 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Secondary2DAxisClick",
                     "type": "Button",
                     "id": "83227e26-e8f1-416e-a4a6-b70394fe5ea5",
-                    "expectedControlType": "",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Secondary2DAxisTouch",
                     "type": "Button",
                     "id": "05c6375e-e244-427a-8e61-cd465ffa62ba",
-                    "expectedControlType": "",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Grip",
@@ -993,8 +942,7 @@
                     "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "GripPress",
@@ -1003,18 +951,16 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
+                    "initialStateCheck": false
                 },
                 {
                     "name": "SecondaryButton",
                     "type": "Button",
                     "id": "cba87b5e-c43b-4c38-b5dc-320d8fbb6136",
-                    "expectedControlType": "",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
+                    "initialStateCheck": false
                 },
                 {
                     "name": "SecondaryTouch",
@@ -1023,8 +969,7 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
+                    "initialStateCheck": false
                 },
                 {
                     "name": "PointerPosition",
@@ -1033,8 +978,7 @@
                     "expectedControlType": "Vector3",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "PointerRotation",
@@ -1043,8 +987,7 @@
                     "expectedControlType": "Quaternion",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "GripPosition",
@@ -1053,8 +996,7 @@
                     "expectedControlType": "Vector3",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "GripRotation",
@@ -1063,8 +1005,7 @@
                     "expectedControlType": "Quaternion",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Haptic",
@@ -1073,8 +1014,7 @@
                     "expectedControlType": "Haptic",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
+                    "initialStateCheck": false
                 },
                 {
                     "name": "PokePosition",
@@ -1083,8 +1023,7 @@
                     "expectedControlType": "Vector3",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "PokeRotation",
@@ -1093,8 +1032,7 @@
                     "expectedControlType": "Quaternion",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "PinchPosition",
@@ -1103,8 +1041,7 @@
                     "expectedControlType": "Vector3",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "PinchRotation",
@@ -1113,8 +1050,7 @@
                     "expectedControlType": "Quaternion",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "PinchValue",
@@ -1123,8 +1059,7 @@
                     "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "PinchReady",
@@ -1133,8 +1068,7 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
+                    "initialStateCheck": false
                 },
                 {
                     "name": "PointerActivate",
@@ -1143,8 +1077,7 @@
                     "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "PointerActivateReady",
@@ -1153,8 +1086,7 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
+                    "initialStateCheck": false
                 },
                 {
                     "name": "GraspValue",
@@ -1163,8 +1095,7 @@
                     "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "GraspReady",
@@ -1173,8 +1104,7 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
+                    "initialStateCheck": false
                 },
                 {
                     "name": "PalmPosePosition",
@@ -1183,8 +1113,7 @@
                     "expectedControlType": "Vector3",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "PalmPoseRotation",
@@ -1193,8 +1122,7 @@
                     "expectedControlType": "Quaternion",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "PinchPose",
@@ -1203,8 +1131,7 @@
                     "expectedControlType": "Pose",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "PokePose",
@@ -1213,8 +1140,7 @@
                     "expectedControlType": "Pose",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "PalmPose",
@@ -1223,8 +1149,7 @@
                     "expectedControlType": "Pose",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "GripPose",
@@ -1233,8 +1158,7 @@
                     "expectedControlType": "Pose",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "AimPose",
@@ -1243,8 +1167,7 @@
                     "expectedControlType": "Pose",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Tracked",
@@ -1253,8 +1176,7 @@
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -1733,8 +1655,7 @@
                     "expectedControlType": "Vector3",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "hmdRotation",
@@ -1743,8 +1664,7 @@
                     "expectedControlType": "Quaternion",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -1783,8 +1703,7 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
+                    "initialStateCheck": false
                 },
                 {
                     "name": "pointerPosition",
@@ -1793,8 +1712,7 @@
                     "expectedControlType": "Vector3",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
+                    "initialStateCheck": false
                 },
                 {
                     "name": "pointerRotation",
@@ -1803,8 +1721,7 @@
                     "expectedControlType": "Quaternion",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1854,8 +1771,7 @@
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "EyePosition",
@@ -1864,8 +1780,7 @@
                     "expectedControlType": "Vector3",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 },
                 {
                     "name": "EyeRotation",
@@ -1874,8 +1789,7 @@
                     "expectedControlType": "Quaternion",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [

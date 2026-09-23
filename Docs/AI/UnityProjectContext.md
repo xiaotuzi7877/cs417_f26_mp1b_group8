@@ -1,5 +1,11 @@
 # MP1B project context
 
+## Room progression (2026-09-23)
+
+Michael's scene includes `RoomSpawnAlignment` on its XR Origin. This compensates for the persistent simulator/headset tracking-space offset after the first input pose update and before releasing locomotion. It preserves eye height and updates `MichaelManor.BreakOut`'s cached inside pose. An isolated simulator test reproduced falling outside the floor without the component and verified stable arrival with it. See `Docs/RoomTransitions.md`.
+
+The local integration branch adds `RoomSceneTransition` to Ken's `VampireRelics` prefab. After `VampireEscape.HasWon`/`OnEscaped`, left thumbstick click or keyboard N loads `Assets/Michael/Scenes/MichaelManorHall.unity` with `LoadSceneMode.Single`. Ken is build scene 0 and Michael is 1; rooms remain at their authored origins and are never intentionally loaded together. The win source owns the prompt text via `SetContinuationPrompt`. See `Docs/RoomTransitions.md`. Michael's PR remains unmerged on GitHub.
+
 ## Asset ownership (2026-09-21)
 
 Ken's scene and room-specific scripts, shaders, materials, models, audio, and prefabs are under `Assets/Ken`. The scene is `Assets/Ken/Scenes/Ken's_room.unity`; its GUID remains `99c9720ab356a0642a771bea13969a05`. Existing asset and folder GUIDs were preserved during moves. Build Settings, the default scene path, and the Web profile's serialized default scene path follow the rename. `Assets/Minh` and `Assets/Michael` are reserved for the other contributors. Shared XR/sample/font/configuration assets remain at their original paths.
@@ -14,7 +20,7 @@ Copied from the saved MP1A working tree at source commit e61e5c36d61f560796ba5c4
 
 - Unity 6000.5.6f1; project root is the MP1B repository root (`mp1b_group8`).
 - URP 17.5, Input System 1.20, OpenXR 1.17.1, XR Interaction Toolkit 3.5.1.
-- The enabled build scene is `Assets/Ken/Scenes/Ken's_room.unity`.
+- Enabled build scenes: `Assets/Ken/Scenes/Ken's_room.unity`, then `Assets/Michael/Scenes/MichaelManorHall.unity`.
 - Scene composition is primarily serialized GameObjects and small root-level MonoBehaviours. Imported XR samples have their own assemblies; first-party scripts use the default assembly.
 - The room spans x/z -7.5 to 7.5, floor y=0, ceiling y=15. The planet is at (0,7.5,0); the XR rig starts at the origin. The primitive car decoration is at (4.69,0,-4.883), rotated 90 degrees around Y.
 - `planetOrbit`, `CometOrbit`, `breakout`, `light`, and `quit` own the existing interactions. Preserve their scene wiring.

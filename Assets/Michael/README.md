@@ -9,9 +9,9 @@ Michael's MP1b room is self-contained under `Assets/Michael`.
 - Runtime packages are already provided by the group project (URP, Input System,
   XR Interaction Toolkit, OpenXR, and TextMesh Pro).
 
-The scene is intentionally not added to `EditorBuildSettings.asset`. The teammate
-responsible for scene integration can add it in the final progression order without
-this import changing shared project settings.
+The room integration adds this scene after Ken's room in `EditorBuildSettings.asset`.
+After Ken's win message, left thumbstick click or keyboard N loads this room and
+unloads Ken's room. See `Docs/RoomTransitions.md` for setup and validation.
 
 ## Room objective
 

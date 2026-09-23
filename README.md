@@ -34,6 +34,6 @@ The repository owner must invite teammates through GitHub repository Settings â†
 - [Vampire puzzle setup](Docs/VampireRelics.md)
 - [Project context and inherited development notes](Docs/AI/UnityProjectContext.md)
 
-`Ken's_room` is currently the only enabled build scene. Scene transitions and additional team scenes have not been implemented yet. The project keeps its inherited Unity application settings; agree on any MP1B application-name or Android package-identifier changes before a release.
+The build starts in `Ken's_room`, followed by `MichaelManorHall`. After solving all three seals and seeing the win message, click the **left controller thumbstick** or press **N** on the keyboard to enter Michael's room. Only one room is loaded at a time, so both rooms can stay at the origin. See [room transition setup and checks](Docs/RoomTransitions.md). The project keeps its inherited Unity application settings; agree on any MP1B application-name or Android package-identifier changes before a release.
 
-This repository starts with a fresh Git history. MP1A's repository remains separate. Generated caches, builds, debug backups, and individual submission documents/videos are not part of this baseline. Unity import, Play Mode, and headset validation still need to be performed on the new copy.
+This repository starts with a fresh Git history. MP1A's repository remains separate. Generated caches, builds, debug backups, and individual submission documents/videos are not part of this baseline. The room transition has passed an isolated Unity Play Mode check with a simulated win; full puzzle and headset validation remain manual checks.

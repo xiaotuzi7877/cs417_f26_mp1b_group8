@@ -14,6 +14,11 @@ public class VampireEscape : MonoBehaviour
     public bool HasWon { get; private set; }
     public UnityEvent OnEscaped => onEscaped;
 
+    public void SetContinuationPrompt(string message)
+    {
+        if (HasWon && progress != null) progress.text = message;
+    }
+
     private void Awake()
     {
         locks = GetComponentsInChildren<VampireLock>(true);

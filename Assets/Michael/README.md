@@ -39,8 +39,9 @@ every Lock.
 ## Next room: Minh
 
 After the win, the exit door lifts to reveal a glowing portal marked `TO MINH'S ROOM`.
-Walk into it (or press `N` on a keyboard) to load Minh's room
-(`Assets/Scenes/SampleScene.unity`). Anything held in either hand comes along: its carry
+Walk into it (or press `N` on a keyboard) to load the next room: the scene listed right after
+Michael's in Build Settings, currently Minh's room (`Assets/Scenes/SampleScene.unity`). Unity
+keeps that list up to date if Minh renames or moves the scene, so the portal needs no change. Anything held in either hand comes along: its carry
 prefab (`Manor/Prefabs/Carry/`) is instantiated in Minh's scene and placed back into the
 same hand.
 

@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 94865075234641436}
   - component: {fileID: 3327339688434603543}
   - component: {fileID: 6473414423079755342}
+  - component: {fileID: 3410243259070507806}
   m_Layer: 0
   m_Name: FalseRelicLabel
   m_TagString: Untagged
@@ -271,6 +272,18 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 3327339688434603543}
   m_maskType: 0
+--- !u!114 &3410243259070507806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7122818801215500642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68a77bbe792aa4d729b0a3ea7ac42021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MichaelManor.ManorFaceViewer
 --- !u!1 &7233749529480689596
 GameObject:
   m_ObjectHideFlags: 0

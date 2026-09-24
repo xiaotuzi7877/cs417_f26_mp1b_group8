@@ -15,16 +15,33 @@ unloads Ken's room. See `Docs/RoomTransitions.md` for setup and validation.
 
 ## Room objective
 
-Find and grab the Silver Fang, then place it into the matching pedestal socket by
-the exit. The insertion sequence releases the door seal, opens the exit, plays the
-win celebration, and shows the `Congratulations` message for five seconds.
+Michael Manor is a five-chamber ritual escape with three ordered Key Props and Locks:
+
+1. Press the portrait runes BAT -> WOLF -> MOON to lift the case over the Silver Fang,
+   then place the Fang in the Watcher Lock. A chest opens to reveal the Midnight
+   Codex and a five-passage map, and five hall Gates light up.
+2. Touch a Gate rune to travel to its chamber (Return Runes bring you back). Four
+   chambers are false leads with their own lever/button Reveals and red herrings; the
+   Moon-marked chamber (blue-white rune) is the Moon Crypt.
+3. In the Moon Crypt press WOLF -> MOON -> BLOOD (wrong orders flash red and reset)
+   within the 2:30 timer. A slab slides aside; place the Moonstone in the Celestial Lock.
+4. Pull the LEFT -> RIGHT levers to release the Blood Sigil, return to the hall, and
+   place it in the exit pedestal. The seal retracts, the door opens, the win
+   celebration plays, and `Congratulations` shows for five seconds.
+
+The hall board tracks ritual progress, keys and locks remaining, chambers explored,
+puzzles solved, clues found, Moon Shards (8 optional collectibles), and the current
+objective. Hold the world-space RESTART control for two seconds to reset the room.
+Inspection props (blacklight, hand mirror, magnifying glass) and angle-revealed
+writing hide optional clues; 13 grabbable FALSE RELIC red herrings are rejected by
+every Lock.
 
 ## Presentation controls
 
 These keyboard shortcuts work in Play Mode and make the room easy to demonstrate
 without a headset:
 
-- `K`: reset, insert the Silver Fang, unlock the door, and play the full sequence
+- `K`: reset and play all three Lock insertions, the door, and the win sequence
 - `W`: replay the win celebration
 - `R`: reset the puzzle, door, and celebration
 - `P`: spawn an orbiting object
